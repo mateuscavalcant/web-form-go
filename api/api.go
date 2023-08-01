@@ -17,7 +17,7 @@ func InitAPI() error {
 
 	r := gin.Default()
 
-	r.LoadHTMLGlob("C:/social-network-go/templates/*")
+	r.LoadHTMLGlob("C:/web-form-go/templates/*")
 	r.Static("/public", "./public")
 
 	r.GET("/signup", func(c *gin.Context) {
