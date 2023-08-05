@@ -21,7 +21,7 @@
     max-width: 430px;
     width: 100%;
     padding: 30px;
-    border-radius: 6px;
+    border-radius: 9px;
     background: #ffffff;
 }
 .form.signup{
@@ -60,7 +60,7 @@ form{
     border: none;
     font-size: 16px;
     font-weight: 400;
-    border-radius: 6px;
+    border-radius: 9px;
 }
 .field input{
     outline: none;
@@ -114,26 +114,4 @@ form{
 }
 .form-content a:hover{
     text-decoration: underline;
-}
-.line{
-    position: relative;
-    height: 1px;
-    width: 100%;
-    margin: 36px 0;
-    background-color: #8b8b8b;
-}
-.line::before{
-    content: 'Or';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #FFF;
-    color: #535353;
-    padding: 0 15px;
-}
-.media-options a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }

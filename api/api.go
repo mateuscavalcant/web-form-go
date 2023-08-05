@@ -18,7 +18,7 @@ func InitAPI() error {
 	r := gin.Default()
 
 	r.LoadHTMLGlob("C:/web-form-go/templates/*")
-	r.Static("/public", "./public")
+	r.Static("/static", "./static")
 
 	r.GET("/signup", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "signup.html", gin.H{})
