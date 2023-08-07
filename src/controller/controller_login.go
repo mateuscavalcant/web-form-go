@@ -34,7 +34,7 @@ func UserLogin(c *gin.Context) {
 	err := db.QueryRow("SELECT id, email, password FROM user1 WHERE "+queryField+"=?", identifier).Scan(&user.ID, &user.Email, &user.Password)
 	if err != nil {
 		log.Println("Error executing SQL statement:", err)
-		resp.Error["credentials"] = "Invalid credentials"
+		resp.Error["identifier"] = "Invalid credentials"
 	}
 
 	encErr := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(password))
