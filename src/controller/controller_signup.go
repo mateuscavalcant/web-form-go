@@ -24,8 +24,14 @@ func Signup(c *gin.Context) {
 	confirmPassword := strings.TrimSpace(c.PostForm("confirm_password"))
 
 	existEmail, err := validators.ExistEmail(email)
+	existUsername, errUsername := validators.ExistUsername(username)
 	if err != nil {
 		log.Println("Error checking email existence:", err)
+		c.JSON(500, gin.H{"error": "Failed to validate email"})
+		return
+	}
+	if errUsername != nil {
+		log.Println("Error checking email existence:", errUsername)
 		c.JSON(500, gin.H{"error": "Failed to validate email"})
 		return
 	}
@@ -44,6 +50,9 @@ func Signup(c *gin.Context) {
 
 	if existEmail {
 		resp.Error["email"] = "Email already exists!"
+	}
+	if existUsername {
+		resp.Error["username"] = "Username already exists!"
 	}
 
 	if len(password) < 8 || len(password) > 16 {
