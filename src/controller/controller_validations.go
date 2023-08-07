@@ -42,3 +42,33 @@ func ExistEmail(c *gin.Context) {
 	c.JSON(200, gin.H{"message": "Email Validad"})
 
 }
+
+func ExistUsername(c *gin.Context) {
+	resp := err.ErrorResponse{
+		Error: make(map[string]string),
+	}
+
+	username := strings.TrimSpace(c.PostForm("username"))
+	existUsername, errUsername := validators.ExistUsername(username)
+	if errUsername != nil {
+		log.Println("Error checking email existence:", errUsername)
+		c.JSON(500, gin.H{"error": "Failed to validate email"})
+		return
+	}
+
+	if username == "" {
+		resp.Error["missing"] = "Some values are missing!"
+	}
+
+	if existUsername {
+		resp.Error["username"] = "Username already exists!"
+	}
+
+	if len(resp.Error) > 0 {
+		c.JSON(400, resp)
+		return
+	}
+
+	c.JSON(200, gin.H{"message": "Username Validad"})
+
+}
