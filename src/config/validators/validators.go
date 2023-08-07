@@ -41,7 +41,7 @@ func ExistUsername(username string) (bool, error) {
 
 	var userCount int
 
-	err := db.QueryRow("SELECT COUNT(id) AS userCount FROM users1 WHERE username=?", username).Scan(&userCount)
+	err := db.QueryRow("SELECT COUNT(id) AS userCount FROM user1 WHERE username=?", username).Scan(&userCount)
 	if err != nil {
 		return false, err
 	}

@@ -25,6 +25,33 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("email").addEventListener("input", function() {
         validateEmail();
     });
+
+    function validateUsername() {
+        var username = document.getElementById("username").value;
+        var formData = new FormData();
+
+        formData.append("username", username);
+        
+        fetch("/validate-username", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                // Exibe as mensagens de erro correspondentes nos campos do formulário
+                document.getElementById("error-username").textContent = data.error.username;
+            } else {
+                document.getElementById("error-username").textContent = "";
+            }
+        })
+        .catch(function(error) {
+            console.error(error);
+        });
+    }
+    document.getElementById("username").addEventListener("input", function() {
+        validateUsername();
+    });
 });
 
         // Ouvinte de evento para enviar o formulário de cadastro
