@@ -21,3 +21,13 @@ The User Registration Application is a web-based application that allows users t
 4. Access the application in your web browser at `http://localhost:8080/signup`
 5. Login using your registered email or username and password.
 6. Explore the features and manage your user account.
+
+
+## Signup form
+![signup](https://github.com/mateuscavalcant/web-form-go/blob/main/static/images/signup_form.jpeg?raw=true)
+
+## Login form
+![login](https://github.com/mateuscavalcant/web-form-go/blob/main/static/images/login_form.jpeg?raw=true)
+
+
+
