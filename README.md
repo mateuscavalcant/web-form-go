@@ -1,5 +1,5 @@
 # web-form-go
-This is a web application for users to sign up and login. built with Golang, HTML, CSS, Javascript and MySQL.
+This is a web application for users to signup and login. built with Golang, HTML, CSS, Javascript and MySQL.
 
 ## Description
 
