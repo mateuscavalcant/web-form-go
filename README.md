@@ -24,10 +24,10 @@ The User Registration Application is a web-based application that allows users t
 
 
 ## Signup form
-![signup](https://github.com/mateuscavalcant/web-form-go/blob/main/static/images/signup_form.jpeg?raw=true)
+![signup](https://github.com/mateuscavalcant/web-form-go/blob/main/screenshots/signup_form.jpeg?raw=true)
 
 ## Login form
-![login](https://github.com/mateuscavalcant/web-form-go/blob/main/static/images/login_form.jpeg?raw=true)
+![login](https://github.com/mateuscavalcant/web-form-go/blob/main/screenshots/login_form.jpeg?raw=true)
 
 
 
