@@ -16,11 +16,12 @@ The User Registration Application is a web-based application that allows users t
 
 ## Usage
 1. Clone the repository: ```https://github.com/mateuscavalcant/web-form-go```
-2. Create your file `.env`, add the database set up and gorilla sessions.
+2. Create your file `.env`, add the database set up.
 3. Run ```main.go``` to start the application.
-4. Access the application in your web browser at `http://localhost:8080/signup`
-5. Login using your registered email or username and password.
-6. Explore the features and manage your user account.
+4. Access the application in your web browser at `http://localhost:8080`
+5. Access the endpoints `http://localhost:8080/signup` and `http://localhost:8080/login`
+6. Login using your registered email or username and password.
+7. Explore the features and manage your user account.
 
 
 ## Signup form
